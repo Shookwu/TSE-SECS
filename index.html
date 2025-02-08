@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech Separation Using BSRNN and DPCCN Models</title>
+    <style>
+        /* 图片居中且最大宽度为页面的一半 */
+        img {
+            max-width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,7 +23,7 @@
     <!-- Abstract -->
     <h2>Abstract</h2>
     <p>
-        Target Speakerx Extraction (TSE) uses a reference cue to extract the target speech from a mixture. 
+        Target Speaker Extraction (TSE) uses a reference cue to extract the target speech from a mixture. 
         In TSE systems relying on audio cues, the speaker embedding from the enrolled speech is crucial for performance, 
         as these embeddings directly affect system success. However, these embeddings may suffer from speaker identity confusion. 
         Unlike previous studies that focus on enhancing the performance of speaker embedding extraction, 
@@ -23,7 +31,7 @@
         This approach improves the consistency of speaker features between the enrolled and extracted speech by constraining 
         the similarity of their representations. Furthermore, the incorporation of conditional loss suppression into the SECS loss 
         results in comprehensive performance improvements. Experimental results validate the effectiveness of the proposed method in 
-        advancing the TSE task. A speech sample is available online.
+        advancing the TSE task. 
     </p>
 
     <!-- Model Architecture -->
@@ -48,24 +56,26 @@
         <tbody>
             <tr>
                 <td>1</td>
-                <td><audio controls><source src="/audio/mixed_audio_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method1_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method2_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/first_speaker_groundtruth_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn/mix1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn/sep1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn_secs/sep1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn/t1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><audio controls><source src="/audio/mixed_audio_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method1_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method2_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/first_speaker_groundtruth_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                
+                <td><audio controls><source src="/audio/bsrnn/mix2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn/sep2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn_secs/sep2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn/t2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td><audio controls><source src="/audio/mixed_audio_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method1_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method2_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/first_speaker_groundtruth_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+ 
+                <td><audio controls><source src="/audio/bsrnn/mix3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn/sep3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn_secs/sep3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/bsrnn/t3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
             </tr>
         </tbody>
     </table>
@@ -92,24 +102,24 @@
         <tbody>
             <tr>
                 <td>1</td>
-                <td><audio controls><source src="/audio/mixed_audio_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method1_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method2_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/first_speaker_groundtruth_1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/mix1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/sep1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn_secs/s1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/t1.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><audio controls><source src="/audio/mixed_audio_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method1_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method2_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/first_speaker_groundtruth_2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/mix2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/sep2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn_secs/s2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/t2.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td><audio controls><source src="/audio/mixed_audio_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method1_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/separated_audio_method2_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
-                <td><audio controls><source src="/audio/first_speaker_groundtruth_3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/mix3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/sep3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn_secs/s3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
+                <td><audio controls><source src="/audio/dpccn/t3.wav" type="audio/wav">Your browser does not support audio playback.</audio></td>
             </tr>
         </tbody>
     </table>
